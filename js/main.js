@@ -58,6 +58,11 @@ function qoldiq() {
 }
 
 
+function tortburchak() {
+  let eni = +prompt(`Ushbu funksiya to'rtburchakning eni va bo'yini qabul qiladi va to'rtburchakning yuzini hisoblaydi. To'rtburchakning enini kiriting:`);
+  let boyi = +prompt("To'rtburchakning bo'yini kiriting:");
+    document.getElementById("demo").innerHTML = (eni * boyi) +' sm^';
+}
 
 
 

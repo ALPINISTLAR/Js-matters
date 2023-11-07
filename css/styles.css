@@ -67,7 +67,7 @@ select:-webkit-autofill:focus {
   margin-right: auto;
   margin-left: auto;
 }
-
+  background: #EAE3DC;
 /* ** MAIN CONTENT ** */
 .main-content
 {

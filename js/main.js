@@ -1,3 +1,5 @@
+alert(`HOZIRCHA FAQAT 15 TASIGA ULGURA OLDIM, TO'G'RISI ISHDAN KEYIN CHARCHAB QOLAYAPMAN. NASIB BO'LSA, ERTALAB QOLGANLARINI HAM TO'LDIRIB QO'YAMAN :-)`)
+
 function yigindi() {
   let a = +prompt("Ushbu funksiya sonlar yig`indisini hisoblaydi, 1 - sonni kiriting:");
   let b = +prompt("2 - sonni kiriting:");

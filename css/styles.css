@@ -99,12 +99,36 @@ select:-webkit-autofill:focus {
 }
 .box{
   position: relative;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  row-gap: 20px;
   padding: 30px 160px 130px;
   border-radius: 15px;
   background-color: #242D44;
+}
+.box-inner{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  row-gap: 20px;
+  column-gap: calc((100% - 650px) / 4);
+  width: 100%;
+  max-height: 330px;
+  overflow-y: scroll;
+  padding-left: 20px;
+  padding-right: 20px;
+
+    /* Foreground, Background */
+    scrollbar-color: #3A4663 #EAE3DC;
+}
+
+.box-inner::-webkit-scrollbar {
+  width: 15px; /* Mostly for vertical scrollbars */
+  height: 15px; /* Mostly for horizontal scrollbars */
+}
+.box-inner::-webkit-scrollbar-thumb { /* Foreground */
+  border-radius: 10px;
+  background: #3A4663;
+}
+.box-inner::-webkit-scrollbar-track { /* Background */
+  border-radius: 10px;
+  background: #EAE3DC;
 }
 .title{
   color: #fff;

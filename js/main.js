@@ -1,4 +1,4 @@
-alert(`HOZIRCHA FAQAT 15 TASIGA ULGURA OLDIM, TO'G'RISI ISHDAN KEYIN CHARCHAB QOLAYAPMAN. NASIB BO'LSA, ERTALAB QOLGANLARINI HAM TO'LDIRIB QO'YAMAN :-)`)
+// alert(`HOZIRCHA FAQAT 15 TASIGA ULGURA OLDIM, TO'G'RISI ISHDAN KEYIN CHARCHAB QOLAYAPMAN. NASIB BO'LSA, ERTALAB QOLGANLARINI HAM TO'LDIRIB QO'YAMAN :-)`)
 
 function yigindi() {
   let a = +prompt("Ushbu funksiya sonlar yig`indisini hisoblaydi, 1 - sonni kiriting:");
@@ -63,7 +63,7 @@ function qoldiq() {
 function tortburchak() {
   let eni = +prompt(`Ushbu funksiya to'rtburchakning eni va bo'yini qabul qiladi va to'rtburchakning yuzini hisoblaydi. To'rtburchakning enini kiriting:`);
   let boyi = +prompt("To'rtburchakning bo'yini kiriting:");
-    document.getElementById("demo").innerHTML = (eni * boyi) +' sm^';
+    document.getElementById("demo").innerHTML = (eni * boyi) +' sm';
 }
 
 
@@ -74,7 +74,7 @@ function string() {
 }
 
 function kvadrat() {
-  let raqam = +prompt("Ushbu funksiya soatlarning kvadratini hisoblaydi:");
+  let raqam = +prompt("Ushbu funksiya sonlarning kvadratini hisoblaydi:");
     document.getElementById("demo").innerHTML = raqam * raqam;
 }
 

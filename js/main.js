@@ -19,7 +19,7 @@ function nextInteger() {
 function uchburchak() {
   let asos = +prompt("Ushbu funksiya uchburchakning asosi va balandligini qabul qiladi va uchburchakning yuzini hisoblaydi. Uchburchakning asosini kiriting:");
   let baladlik = +prompt("Uchburchakning balandligini kiriting:");
-    document.getElementById("demo").innerHTML = (asos * baladlik) / 2 +' sm^';
+    document.getElementById("demo").innerHTML = (asos * baladlik) / 2 +' sm²';
 }
 
 function yearsOld() {
@@ -63,7 +63,7 @@ function qoldiq() {
 function tortburchak() {
   let eni = +prompt(`Ushbu funksiya to'rtburchakning eni va bo'yini qabul qiladi va to'rtburchakning yuzini hisoblaydi. To'rtburchakning enini kiriting:`);
   let boyi = +prompt("To'rtburchakning bo'yini kiriting:");
-    document.getElementById("demo").innerHTML = (eni * boyi) +' sm';
+    document.getElementById("demo").innerHTML = (eni * boyi) +' sm²';
 }
 
 

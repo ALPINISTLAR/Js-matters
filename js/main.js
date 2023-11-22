@@ -240,7 +240,6 @@ function bolinuvchi100() {
         return false;
       }
 
-
       return true;
     } catch (error) {
       return false;
@@ -278,4 +277,79 @@ function stringBelgiSoni() {
   const belgiSoni = belgiSoniTopish(matn);
 
   document.getElementById("demo").innerHTML = `Stringda belgi soni: ${belgiSoni} ta`;
+}
+
+function bolinuvchilar() {
+  function bolish(x, y) {
+    if (x % y === 0) {
+      return true
+    } else {
+      return false
+    }
+  }
+
+  const x = prompt(`41.Funksiya 2ta argument qabul qiladi. Birinchi argument ikkinchi argumentdan katta emas. Agar birinchi argumentni ikkinchisiga bo’linsa, funksiya True qaytaradi aks holda False qaytaradi.
+
+  1 - argumentni kiriting:`)
+  const y = prompt(`2 - argumentni kiriting:`)
+  let natija = bolish();
+  if (natija) {
+    document.getElementById("demo").innerHTML = `Rost, ${x} soni ${y} ga bo'linadi!`;
+  } else {
+    document.getElementById("demo").innerHTML = `Yolg'on, ${x} soni ${y} ga bo'linmaydi!`;
+  }
+}
+
+function raqamgaOzgartir() {
+  function raqamYasa(inputString) {
+    if (isFinite(inputString)) {
+      return Number(inputString);
+    } else {
+      return 'Kiritilgan qiymat raqam emas';
+    }
+  }
+
+  let userInput = prompt(`42.Funksiyaga raqam string ko’rinishida berilsa, funksiya ushbu ma’lumotni yana raqam ma’lumot turi ko’rinishida qaytarib bersin.
+
+  Iltimos, raqam kiriting:`);
+  let result = raqamYasa(userInput);
+
+  document.getElementById("demo").innerHTML = result;
+}
+
+function tortburchakYuzi() {
+  function hisoblaTortburchakYuzi(tomon1, tomon2) {
+    if (isNaN(tomon1) || isNaN(tomon2) || tomon1 <= 0 || tomon2 <= 0) {
+      return -1;
+    }
+    var yuz = tomon1 * tomon2;
+    return yuz;
+  }
+
+  var tomon1 = parseFloat(prompt(`43.To’rtburchakning yuzini hisoblaydigan funksiya yasang. Bunda funksiyaga to’rtburchakning(ya’ni to’g’ri to'rtburchak) tomonlari beriladi. Funksiya uning yuzini qaytarishi kerak, agar tomonlar xato kiritilgan bo’lsa funksiya -1 qaytarsin.
+
+  To’rtburchak tomonini kiriting:`));
+  var tomon2 = parseFloat(prompt('To’rtburchak ikkinchi tomonini kiriting:'));
+  var yuzi = hisoblaTortburchakYuzi(tomon1, tomon2);
+
+  if (yuzi === -1) {
+    document.getElementById("demo").innerHTML = 'Xatolik! Tomonlar to’g’ri son emas yoki manfiy son!';
+  } else {
+    document.getElementById("demo").innerHTML = `To’rtburchakning yuzi: ${yuzi} sm²`;
+  }
+}
+
+
+function nameSurname() {
+  function formatNameAndSurname(firstName, lastName) {
+    return `${firstName}, ${lastName}`;
+  }
+
+  var ism = prompt(`44.Funksiyaga ism va familiya argument qilib berilsa, funksiya “ism, familiya” formatdagi string qaytarsin.
+
+  Iltimos, ismingizni kiriting:`);
+  var familiya = prompt('Iltimos, familiyangizni kiriting:');
+  var formattedName = formatNameAndSurname(ism, familiya);
+
+  document.getElementById("demo").innerHTML = formattedName;
 }

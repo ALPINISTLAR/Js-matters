@@ -353,3 +353,35 @@ function nameSurname() {
 
   document.getElementById("demo").innerHTML = formattedName;
 }
+
+
+function negativSonniHisobla() {
+  function negativiniHisobla() {
+    var son = parseFloat(prompt('Istalgan sonni kiriting:'));
+
+    if (isNaN(son)) {
+      document.getElementById("demo").innerHTML = 'Xatolik! Iltimos, son kiriting.';
+      return;
+    }
+  }
+  var runner = negativiniHisobla();
+  var negativSon = -runner;
+  document.getElementById("demo").innerHTML = negativSon;
+}
+
+
+
+function kinogaKirmoqchimi() {
+  var bolaYoshi = parseInt(prompt(`50.Kinoteatrga bollar kino ko’rgani kirmoqchi bunda 2ta talab mavjud. Shunda funksiya 2ta argument qabul qiladi. Bolaning yoshini va ota-onasi bilan birgami degan boolean qiymat. Agar bolaning yoshi kamida 15 bo’lsa va ota-onasi bilan birga bo’lsa funksiya true qaytarsin aks holda false.
+
+  Bolangizni yoshini kiriting:`));
+  var otaOnasiBilanBirga = confirm('Ota-onasi bilan birgami?');
+
+  var natija = (bolaYoshi >= 15) && otaOnasiBilanBirga;
+
+  if (natija) {
+    document.getElementById("demo").innerHTML = `Kinoga kirishi mumkin.`;
+  } else {
+    document.getElementById("demo").innerHTML = `Kinoga kirishi taqiqlanadi!.`;
+  }
+}

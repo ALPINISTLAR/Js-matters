@@ -382,6 +382,22 @@ function kinogaKirmoqchimi() {
   if (natija) {
     document.getElementById("demo").innerHTML = `Kinoga kirishi mumkin.`;
   } else {
-    document.getElementById("demo").innerHTML = `Kinoga kirishi taqiqlanadi!.`;
+    document.getElementById("demo").innerHTML = `Kinoga kirishi taqiqlanadi!`;
   }
+}
+
+// ========== start 51 ===========
+
+
+
+
+// == 80 ==
+function ahvol() {
+  let holat = prompt(`80. Ushbu funksiya 'happy' yoki 'sad' qiymatini qabul qiladi. Agar qiymat berilmasa u 'neutral'ga teng bo'ladi.`);
+  return `Today, I am feeling ${holat || 'neutral'}`;
+}
+
+function ahvolniAniqla() {
+  let natija = ahvol();
+  document.getElementById("demo").innerHTML = natija;
 }

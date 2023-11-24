@@ -433,6 +433,20 @@ function holatniAniqlash() {
   document.getElementById("demo").innerHTML = `Holat: ${holat}`;
 }
 
+// == 54 ==
+function uzunlikJuftmi() {
+  var str = prompt(`54.Funksiya string qabul qiladi. Agar ushbu stringning uzunligi.
+  juft bo’lsa funksiya true qaytarsin, aks holda false.
+
+  Iltimos, bir matn kiriting:`);
+  var juftUzunlik = str.length % 2 === 0;
+
+
+  var demoElement = document.getElementById("demo");
+  demoElement.innerHTML = juftUzunlik ? `ROST, matn uzunligi juft.` : `YOLG'ON, matn uzunligi juft emas.`;
+}
+
+
 
 
 

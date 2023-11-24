@@ -504,6 +504,27 @@ function kabisaYili() {
   }
 }
 
+// == 58 ==
+function birinchiHarfisiz() {
+  function birinchiHarf(soz) {
+    if (soz && typeof soz === 'string') {
+      var birinchiHarf = soz.charAt(0);
+
+      var qolganSoz = soz.slice(1);
+
+      return qolganSoz;
+    } else {
+      return "Noto'g'ri formatda ma'lumot kiritildi.";
+    }
+  }
+
+  var kiritilganSoz = prompt(`58.Funskiyaga so’z kiritilsa funksiya ushbu so’zni birinchi harfisiz qaytarib bersin.
+
+  Iltimos, biror so'zni kiriting:`);
+
+  document.getElementById("demo").innerHTML = birinchiHarf(kiritilganSoz);
+}
+
 
 
 

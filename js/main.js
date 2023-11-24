@@ -478,6 +478,32 @@ function songgiElementChiqarish() {
   demoElement.innerHTML = "So'nggi element: " + songgiElement;
 }
 
+// == 57 ==
+function kabisaYili() {
+  function kabisaYiliAniqla(yil) {
+    var bolinishi4ga = yil % 4 === 0;
+
+    var bolinishi100ga = yil % 100 === 0;
+
+    var bolinishi400ga = yil % 400 === 0;
+
+    var kabisaYili = (bolinishi4ga && !bolinishi100ga) || bolinishi400ga;
+
+    return kabisaYili;
+  }
+
+  var testYil = prompt(`57.Kabisa yilini aniqlaydigan funksiya yasang. Agar kiritilgan yil kabisa bo’lsa funksiya true qaytaradi, aks holda false. Kabisa yili 4ga bo’linadigan yil bo’lib, lekin 100ga bo’linsa u holda 400ga ham bo’linganidagina kabisa hisoblanadi.
+
+  Iltimos, tekshirish uchun yilni kiriting:`);
+  var natija = kabisaYiliAniqla(parseInt(testYil));
+
+  if (natija) {
+    document.getElementById("demo").innerHTML = testYil + " - yil Kabisa yili!";
+  } else {
+    document.getElementById("demo").innerHTML = testYil + " - yil Kabisa yili emas!";
+  }
+}
+
 
 
 

@@ -446,6 +446,19 @@ function uzunlikJuftmi() {
   demoElement.innerHTML = juftUzunlik ? `ROST, matn uzunligi juft.` : `YOLG'ON, matn uzunligi juft emas.`;
 }
 
+// == 55 ==
+function darajaKotar() {
+  var son1 = prompt(`55.Funksiya 2ta argument qabul qiladi. Ikkala argument ham son, funksiya 1-sonni 2-songa darajaga ko’tarilgan qiymatni qaytarsin.
+
+  Iltimos, birinchi sonni kiriting:`);
+  var son2 = prompt("Iltimos, ikkinchi sonni kiriting:");
+
+  var natija = Math.pow(Number(son1), Number(son2));
+
+  var demoElement = document.getElementById("demo");
+  demoElement.innerHTML = "Natija: " + natija;
+}
+
 
 
 

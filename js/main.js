@@ -422,6 +422,19 @@ function qoshtirnoq() {
   document.getElementById("demo").innerHTML = result;
 }
 
+// == 53 ==
+function holatniAniqlash() {
+  var son = prompt(`53.Quyidagi namunani ternary operator ko’rinishida yozing. Ternary operatorga misol: 2===2 ? 'teng' : 'tengemas'
+
+  *funsiya son qabul qiladi. Agar son '0'dan katta bo'lsa "yaxshi", aks holda "yaxshi emas" qaytaradi.  Albatta buni aniqlash uchun ternary operator dan foydalanadi!
+
+  Iltimos, son kiriting:`);
+  var holat = son > 0 ? "yaxshi" : "yaxshi emas";
+  document.getElementById("demo").innerHTML = `Holat: ${holat}`;
+}
+
+
+
 
 
 

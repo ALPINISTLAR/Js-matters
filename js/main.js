@@ -536,7 +536,162 @@ function teskariQiymat() {
   document.getElementById("demo").innerHTML = teskari;
 }
 
+// == 60 ==
+function juftToqTekshir() {
+  var son = prompt("Iltimos, sonni kiriting:");
 
+  var natija = (son % 2 === 0) ? "juft" : "toq";
+
+  document.getElementById("demo").innerHTML = "Natija: " + natija;
+}
+
+
+// **********************
+// == 81 ==
+function nechtaBogin() {
+  function syllableCount(word) {
+    var syllableCount = 0;
+
+    for (var i = 0; i < word.length; i++) {
+      if (isVowel(word[i])) {
+        if (i < word.length - 1 && isConsonant(word[i + 1])) {
+          syllableCount++;
+        }
+      }
+    }
+    if (isVowel(word[word.length - 1])) {
+      syllableCount++;
+    }
+    return syllableCount;
+  }
+  function isVowel(char) {
+    return /[aeiouAEIOU]/.test(char);
+  }
+  function isConsonant(char) {
+    return /[bcdfghjklmnpqrstvwxyzBCDFGHJKLMNPQRSTVWXYZ]/.test(char);
+  }
+  var kiritilganSoz = prompt("Istalgan so'zni kiriting:");
+  var boginSoni = syllableCount(kiritilganSoz);
+
+  document.getElementById("demo").innerHTML = `So'zda ${boginSoni} ta bo'g'in mavjud.`;
+}
+
+
+
+
+
+// == 106 ==
+function raqamSoni() {
+  function raqamSoniTop(son) {
+    var sonStr = son.toString();
+    var raqamSoni = sonStr.length;
+    return raqamSoni;
+  }
+
+  var kiritilganSon = prompt(`106.Funksiya son qabul qilsa, Funksiya ushbu sonda nechta
+  raqam borligini qaytarsin.
+
+  Istalgan sonni kiriting:`);
+  var raqamSoni = raqamSoniTop(kiritilganSon);
+
+  if (isNaN(kiritilganSon)) {
+    document.getElementById("demo").innerHTML = "Son kiriting!";
+  } else {
+    var raqamSoni = raqamSoniTop(parseInt(kiritilganSon));
+    document.getElementById("demo").innerHTML = `Kiritilgan son ${raqamSoni} ta raqamdan iborat.`;
+  }
+}
+
+
+
+
+// == 107 ==
+function engKattaSonYasa() {
+  function engKattaSon(son) {
+    var sonStr = son.toString();
+    var sonArray = sonStr.split('');
+    sonArray.sort(function(a, b) {
+      return b - a;
+    });
+
+    var yangiSon = parseInt(sonArray.join(''));
+
+    return yangiSon;
+  }
+
+  var kiritilganSon = prompt(`107.Funksiya son qabu qilsa, ushbu funksiya sonning raqamlari o’rni istalgancha almashtirib eng katta hosil bo’lishi mumkin bo’lgan sonni qaytarsin.
+
+  Istalgan sonni kiriting:`);
+
+  if (isNaN(kiritilganSon)) {
+    document.getElementById("demo").innerHTML = "Raqam kiriting!";
+  } else {
+    var engKatta = engKattaSon(parseInt(kiritilganSon));
+    document.getElementById("demo").innerHTML = "Eng katta hosil bo'lgan son: " + engKatta;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+// == 108 ==
+function randomSon() {
+  var qiymat1 = parseInt(prompt(`108.Funksiya 2ta sonlar oralig’ini qabul qiladi. Funksiya ushbu oraliqdan bironta random son qaytarsin.
+
+  Birinchi sonni kiriting:`));
+  var qiymat2 = parseInt(prompt("Ikkinchi sonni kiriting:"));
+
+  if (isNaN(qiymat1) || isNaN(qiymat2)) {
+    document.getElementById("demo").innerHTML = "Noto'g'ri kiritish!";
+    return;
+  }
+
+  var son = Math.floor(Math.random() * (qiymat2 - qiymat1 + 1)) + qiymat1;
+  document.getElementById("demo").innerHTML = `${qiymat1} va ${qiymat2} orasidagi tasodifiy son: ${son}`;
+}
+
+
+// == 109 ==
+function narissistikSon() {
+  let son = prompt(`109.Funksiya son qabul qiladi. Ushbu funksiya ushbu son narissistik son bo’lsa true qaytarsin, aks holda false. Narissistik son degani sonning har bir raqamini sonning uzunligi miqdorida darajaga ko’tarib qo’shib chiqilganda o’ziga teng bo’lgan son.
+
+  Istalgan sonni kiriting:`);
+
+  let raqamlar = son.split("").map(Number);
+  let daraja = son.length;
+  let summa = raqamlar.reduce((total, num) => total + Math.pow(num, daraja), 0);
+  let natija = summa === parseInt(son);
+
+  if (natija) {
+    document.getElementById("demo").innerHTML = `Ha, bu narissistik son.`;
+  } else {
+    document.getElementById("demo").innerHTML = `Yo'q, bu narissistik son emas.`;
+  }
+}
+
+
+// == 110 ==
+function kattaHarfSoni() {
+  var satr = prompt(`110.Funksiya string qabul qiladi.Funksiya ushbu stringda nechta katta harf ishtirok etganin qaytarsin.
+
+  Iltimos, satrni kiriting:`);
+
+  var kattaHarfSanasi = 0;
+
+  for (var i = 0; i < satr.length; i++) {
+    if (satr[i] >= 'A' && satr[i] <= 'Z') {
+      kattaHarfSanasi++;
+    }
+  }
+
+  document.getElementById("demo").innerHTML = `Stringda ${kattaHarfSanasi} ta katta harf bor.`;
+}
 
 
 

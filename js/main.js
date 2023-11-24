@@ -525,6 +525,19 @@ function birinchiHarfisiz() {
   document.getElementById("demo").innerHTML = birinchiHarf(kiritilganSoz);
 }
 
+// == 59 ==
+function teskariQiymat() {
+  var qiymat = prompt(`59.Boolen qiymatini teskarisini qaytarib beradigan funksiya yasang.
+
+  Iltimos, boolean qiymatni kiriting (true yoki false):`);
+
+  var teskari = (qiymat === 'true') ? false : (qiymat === 'false') ? true : "Noto'g'ri formatda qiymat kiritildi.";
+
+  document.getElementById("demo").innerHTML = teskari;
+}
+
+
+
 
 
 

@@ -387,9 +387,119 @@ function kinogaKirmoqchimi() {
 }
 
 // ========== start 51 ===========
+// == 51 ==
+function birgaOshir() {
+  alert(`51. Bizda [3, 4, 5, 6] massivlar bor, funksiya ishga tushganida, massivlarning har biri 1 ga oshiriladi. Natija ekranga chiqadi.`)
+  function oshir1ga(arr) {
+    arr = [3, 4, 5, 6];
+    let natija = arr.map(element => element + 1);
+
+    return natija;
+  }
+  let result = oshir1ga();
+
+  document.getElementById("demo").innerHTML = result;
+}
+
+// == 52 ==
+function qoshtirnoq() {
+  function hosilQil() {
+    var ism = prompt(`52.Template string yordamida ya’ni backticlar orqali “ ushbu
+    formatdagi stringni hosil qiling.
+
+    Natija: “Donyor Olimov” ko’rinishida bo’lsin.
+
+    *funksiya ism va familiya qabul qiladi, ularni birlashtirib qo'shtirnoqqa o'rab beradi.
+
+    Ismingizni kiriting:`);
+    var familiya = prompt("Familiyangizni kiriting:");
+
+    var natija = `"${ism} ${familiya}"`;
+    return natija;
+  }
+
+  var result = hosilQil();
+  document.getElementById("demo").innerHTML = result;
+}
 
 
 
+
+
+
+
+
+
+// == 76 ==
+function qaytarString(str, miqdor) {
+  if (typeof str !== 'string' || miqdor <= 0) {
+    return "Not A String !!";
+  }
+
+
+  let natija = "";
+  for (let i = 0; i < miqdor; i++) {
+    natija += str;
+  }
+
+  return natija;
+}
+
+// Test qilish uchun:
+console.log(qaytarString("Mubashir", 2)); // "MubashirMubashir"
+console.log(qaytarString("Matt", 3));      // "MattMattMatt"
+console.log(qaytarString(1990, 7));         // "Not A String !!"
+
+
+
+
+
+
+// == 77 ==
+function koplik() {
+  const soz = prompt(`77.Funksiyaga so’z kiritilsa, agar ushbu so’z ko’plikda bo’lsa
+  funksiya true qaytarsin, aks holda false.
+
+  Iltimos, so'z kiriting:`);
+
+  const natija = soz.toLowerCase().endsWith("lar");
+
+  document.getElementById("demo").innerHTML = natija;
+}
+
+// == 78 ==
+function boshOxiri() {
+  let str = prompt(`78.Funksiya string qabul qiladi. Ushbu funksiya ushbu stringni
+  bosh va oxirgi harflarini birlashtirgan stringni qaytarsin.
+
+  Istalgan so'zni kiriting:`);
+
+  if (!str || str.length < 2) {
+    document.getElementById("demo").innerHTML = "Kamida ikkita harfli so'z kiritilishi kerak!";
+    return;
+  }
+
+  let boshHarf = str[0];
+  let oxirgiHarf = str[str.length - 1];
+
+  let natija = boshHarf + oxirgiHarf;
+  document.getElementById("demo").innerHTML = natija;
+}
+
+// == 79 ==
+function sozAytish() {
+  let word = prompt(`79.Jon so’zni qiynalib talaffuz qiladi. Masalan quyosh so’zini qu… qu… quyosh deb, daraxt so’zini da… da… daraxt deb, ya’ni boshida 2 marta so’zini 2ta harfini aytadi keyin hammasini. Agar funksiya string kiritilsa xuddi shunday formatda string qaytarsin.
+
+  !! so'z eng kamida 2 bo'gindan iborat bo'lishi shart.
+
+  So'zni kiriting:`);
+  if (word && word.length >= 4) {
+    let prefix = word.substring(0, 2);
+    let natija = `${prefix}... ${prefix}... ${word}`;
+
+    document.getElementById("demo").innerHTML = natija;
+  }
+}
 
 // == 80 ==
 function ahvol() {

@@ -549,20 +549,20 @@ function juftToqTekshir() {
 // **********************
 // == 81 ==
 function nechtaBogin() {
-  function syllableCount(word) {
-    var syllableCount = 0;
+  function boginSanash(word) {
+    var boginSanash = 0;
 
     for (var i = 0; i < word.length; i++) {
       if (isVowel(word[i])) {
         if (i < word.length - 1 && isConsonant(word[i + 1])) {
-          syllableCount++;
+          boginSanash++;
         }
       }
     }
     if (isVowel(word[word.length - 1])) {
-      syllableCount++;
+      boginSanash++;
     }
-    return syllableCount;
+    return boginSanash;
   }
   function isVowel(char) {
     return /[aeiouAEIOU]/.test(char);
@@ -570,8 +570,10 @@ function nechtaBogin() {
   function isConsonant(char) {
     return /[bcdfghjklmnpqrstvwxyzBCDFGHJKLMNPQRSTVWXYZ]/.test(char);
   }
-  var kiritilganSoz = prompt("Istalgan so'zni kiriting:");
-  var boginSoni = syllableCount(kiritilganSoz);
+  var kiritilganSoz = prompt(`81.Funksiyaga so’z berilsa, ushbu funksiya ushbu so’zda nechta bo’g’in borligini aytsin.
+
+  Istalgan so'zni kiriting:`);
+  var boginSoni = boginSanash(kiritilganSoz);
 
   document.getElementById("demo").innerHTML = `So'zda ${boginSoni} ta bo'g'in mavjud.`;
 }

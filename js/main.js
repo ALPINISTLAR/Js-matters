@@ -459,6 +459,25 @@ function darajaKotar() {
   demoElement.innerHTML = "Natija: " + natija;
 }
 
+// == 56 ==
+function songgiElementChiqarish() {
+  var massiv = prompt(`56.Funksiya massiv qabul qiladi. Ushbu funksiya massivning
+  so’nggi elementini qaytarib bersin.
+
+  *massivni vergul(,) bilan kiriting.
+
+  Iltimos, massivni kiriting:`);
+
+  var tartiblanganMassiv = massiv.split(',').map(function (item) {
+    return parseFloat(item);
+  });
+
+  var songgiElement = tartiblanganMassiv[tartiblanganMassiv.length - 1];
+
+  var demoElement = document.getElementById("demo");
+  demoElement.innerHTML = "So'nggi element: " + songgiElement;
+}
+
 
 
 

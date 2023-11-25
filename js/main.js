@@ -186,7 +186,7 @@ function stringBoshmi() {
       return false;
     }
   }
-  const malumot = prompt(`37.Shunday funksiya yasangki, unga string argument qilib beriladi, agar ushbu string bo’sh bo’lsa funksiya true qaytaradi, aks holda false.*
+  const malumot = prompt(`101.Shunday funksiya yasangki, unga string argument qilib beriladi, agar ushbu string bo’sh bo’lsa funksiya true qaytaradi, aks holda false.*
 
   *qo'shimcha:
 
@@ -873,9 +873,68 @@ function qanchaBosibOtilgan() {
   document.getElementById("demo").innerHTML = "Uyiga qaytish uchun bosib o'tiladigan masofa: " + bosibOtilganMasofa + " km";
 }
 
+// == 98 ==
+function ucburchakBolsa() {
+  function uchburchakHosilBolsa() {
+    var a = parseFloat(prompt(`98.Funksiya uchburchakning tomonlari argument qilib beriladi. Agar ushbu berilgan tomonlardan uchburchak yasab bo’lsa unda funksiya TRUE qaytarsin, aks holda FALSE. Uchburchakning qoida, istalgan 2ta tomonining yig’igindisi uchunchi tomondan katta bo’lsagina uchburchak hosil bo’ladi.
 
+    Uchburchakning birinchi tomonini kiriting:`));
+    var b = parseFloat(prompt("Uchburchakning ikkinchi tomonini kiriting:"));
+    var c = parseFloat(prompt("Uchburchakning uchunchi tomonini kiriting:"));
 
+    var hosilBolsa = a + b > c && a + c > b && b + c > a;
 
+    return hosilBolsa;
+  }
+
+  var natija = uchburchakHosilBolsa();
+
+  if (natija) {
+    document.getElementById("demo").innerHTML = `Rost, uchburchak hosil bo'ladi.`;
+  } else {
+    document.getElementById("demo").innerHTML = `Yolg'on, uchburchak hosil bo'lmaydi.`;
+  }
+}
+
+// == 99 ==
+function massivSonQaytar() {
+  function sonlarMassivi(t1, t2) {
+    var massiv = [Math.round(t1), Math.round((t1 + t2) / 2), Math.round(t2)];
+
+    return massiv;
+  }
+
+  var birinchiSon = parseFloat(prompt(`99.Funksiya 2 son oralig’gini qabul qilsa, ushbu 2ta son orasidagi sonlardan tuzilgan massivni ushbu funksiya qaytarsin.
+
+  Birinchi sonni kiriting:`));
+  var ikkinchiSon = parseFloat(prompt("Ikkinchi sonni kiriting:"));
+
+  var massiv = sonlarMassivi(birinchiSon, ikkinchiSon);
+  document.getElementById("demo").innerHTML = "Tuzilgan sonlar massivi: " + massiv;
+}
+
+// == 100 ==
+function elGenerate() {
+  function generateElements(str) {
+    var parts = str.split('*');
+    var tag = parts[0];
+    var count = parseInt(parts[1]);
+
+    var elements = [];
+
+    for (var i = 0; i < count; i++) {
+      elements.push(`<${tag}></${tag}>`);
+    }
+
+    return elements.join('');
+  }
+  alert(`Natijalar console ga chiqdi, tekshirib ko'ring!`)
+  document.getElementById("demo").innerHTML = `Natijalar console ga chiqdi, tekshirib ko'ring!`;
+
+  console.log(generateElements("div*2"));
+  console.log(generateElements("p*1"));
+  console.log(generateElements("li*3"));
+}
 
 
 
@@ -1023,11 +1082,6 @@ function qaytarString(str, miqdor) {
   return natija;
 }
 
-// Test qilish uchun:
-console.log(qaytarString("Mubashir", 2)); // "MubashirMubashir"
-console.log(qaytarString("Matt", 3));      // "MattMattMatt"
-console.log(qaytarString(1990, 7));         // "Not A String !!"
-
 
 
 
@@ -1035,7 +1089,7 @@ console.log(qaytarString(1990, 7));         // "Not A String !!"
 
 // == 77 ==
 function koplik() {
-  const soz = prompt(`77.Funksiyaga so’z kiritilsa, agar ushbu so’z ko’plikda bo’lsa
+  const soz = prompt(`102.Funksiyaga so’z kiritilsa, agar ushbu so’z ko’plikda bo’lsa
   funksiya true qaytarsin, aks holda false.
 
   Iltimos, so'z kiriting:`);
@@ -1047,7 +1101,7 @@ function koplik() {
 
 // == 78 ==
 function boshOxiri() {
-  let str = prompt(`78.Funksiya string qabul qiladi. Ushbu funksiya ushbu stringni
+  let str = prompt(`103.Funksiya string qabul qiladi. Ushbu funksiya ushbu stringni
   bosh va oxirgi harflarini birlashtirgan stringni qaytarsin.
 
   Istalgan so'zni kiriting:`);
@@ -1066,7 +1120,7 @@ function boshOxiri() {
 
 // == 79 ==
 function sozAytish() {
-  let word = prompt(`79.Jon so’zni qiynalib talaffuz qiladi. Masalan quyosh so’zini qu… qu… quyosh deb, daraxt so’zini da… da… daraxt deb, ya’ni boshida 2 marta so’zini 2ta harfini aytadi keyin hammasini. Agar funksiya string kiritilsa xuddi shunday formatda string qaytarsin.
+  let word = prompt(`104.Jon so’zni qiynalib talaffuz qiladi. Masalan quyosh so’zini qu… qu… quyosh deb, daraxt so’zini da… da… daraxt deb, ya’ni boshida 2 marta so’zini 2ta harfini aytadi keyin hammasini. Agar funksiya string kiritilsa xuddi shunday formatda string qaytarsin.
 
   !! so'z eng kamida 2 bo'gindan iborat bo'lishi shart.
 
@@ -1081,7 +1135,7 @@ function sozAytish() {
 
 // == 80 ==
 function ahvol() {
-  let holat = prompt(`80. Ushbu funksiya 'happy' yoki 'sad' qiymatini qabul qiladi. Agar qiymat berilmasa u 'neutral'ga teng bo'ladi.`);
+  let holat = prompt(`105. Ushbu funksiya 'happy' yoki 'sad' qiymatini qabul qiladi. Agar qiymat berilmasa u 'neutral'ga teng bo'ladi.`);
   return `Today, I am feeling ${holat || 'neutral'}`;
 }
 

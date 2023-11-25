@@ -672,10 +672,97 @@ function coronaEnd() {
   }
 }
 
+// == 86 ==
+function massivQaytar() {
+  function massivOshir(massiv) {
+    for (var i = 0; i < massiv.length; i++) {
+      massiv[i] *= 2;
+    }
+    return massiv;
+  }
 
+  var massiv = prompt(`86.Funksiya massiv qabul qiladi va ikkilangan massiv qaytaradi.
 
+  *massivni kiritishda vergul(,) qo'yishni unutmang!
 
+  Massivni kiriting:`).split(',').map(Number);
+  var natija = massivOshir(massiv);
+  document.getElementById("demo").innerHTML = "Natija: " + natija;
+}
 
+// == 87 ==
+function massivUzunlik() {
+  function uzunlikMassivi(sozlar) {
+    var uzunliklar = sozlar.map(function(soz) {
+      return soz.length;
+    });
+    return uzunliklar;
+  }
+  var sozlar = prompt(`87.Funksiya so’zlar massivini qabul qiladi. Funksiya ana shu
+  so’zlarning uzunligidan iborat bo’lgan yangi massiv qaytarsin.
+
+  *massivni kiritishda vergul(,) qo'yishni unutmang!
+
+  So'zlar massivini kiriting:`).split(',');
+  var natija = uzunlikMassivi(sozlar);
+  document.getElementById("demo").innerHTML = "Uzunliklar: " + natija;
+}
+
+// == 88 ==
+function taksiKM() {
+  function kilometrNecha(summa) {
+    var birinchiKilometrNarxi = 4000;
+    var qolganSumma = summa - birinchiKilometrNarxi;
+
+    var kilometr = qolganSumma / 1000;
+
+    return kilometr;
+  }
+
+  var summa = parseInt(prompt(`88.Taksi kilometriga 1000 so’mdan haq oladi. Lekin birinchi kilometri 4000 so’m. Agar funksiya taksiga to’langan yakuniy summani qabul qilsa. Funksiya taksining necha kilometr yurganini qaytarsin.
+
+  Taksi uchun to'langan yakuniy summani kiriting:`));
+  var natija = kilometrNecha(summa);
+  document.getElementById("demo").innerHTML = `Taksi ${natija} kilometr yurgan.`;
+}
+
+// == 89 ==
+function naechtaDbor() {
+  function hisoblashD(matn) {
+    var nechtaD = 0;
+    for (var i = 0; i < matn.length; i++) {
+      if (matn[i].toLowerCase() === 'd') {
+        nechtaD++;
+      }
+    }
+
+    if (nechtaD > 0) {
+      return `Matnda ${nechtaD} ta "d" harfi bor.`;
+    } else {
+      return 'Matnda "d" harfi ishtirok etmagan!';
+    }
+  }
+  var matn = prompt(`89.Funksiya matn qabul qilsa, ushbu funksiya ushbu matnda “d” harfi nechi marta ishtirok etganligini qaytarsin. “d” harfining katta kichikligini ahamiyati yo’q.
+
+  Matn kiriting:`);
+  var natija = hisoblashD(matn);
+  document.getElementById("demo").innerHTML = natija;
+}
+
+// == 90 ==
+function boshjoyQosh() {
+  function boshJoy(matn) {
+    var natija = matn.split('').join(' ');
+    return natija;
+  }
+
+  var matn = prompt(`90. Funksiya string qabul qiladi. Va har belgini orasiga bo’sh joy
+  qo’yib qaytarsin.
+
+  Matn kiriting:`);
+  var natija = boshJoy(matn);
+  document.getElementById("demo").innerHTML = natija;
+}
 
 
 

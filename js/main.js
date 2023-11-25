@@ -846,6 +846,40 @@ function massivYigindiniTop() {
   document.getElementById("demo").innerHTML = "Massiv yig'indisi: " + yigindi;
 }
 
+// == 96 ==
+function faylNominiAjratibOlish() {
+  var faylManzili = prompt(`96.Funksiyaga faylning manzili kiritiladi. Funksiya ushbu
+  ma’lumotdan faylining nomi ajratib bersin.
+
+  Fayl manzilini kiriting:`);
+
+  var faylNom = faylManzili.split('/').pop();
+
+  document.getElementById("demo").innerHTML = "Fayl nomi: " + faylNom;
+}
+
+// == 97 ==
+function qanchaBosibOtilgan() {
+  var masofalar = prompt(`97.Doston uyidan masofalar bosib o’tadi. Uyidan yo oldinga
+  yoki orqaga. Bosib o’tilgan masoflar massivi funksiya berilsa, funksiya Doston uyiga qaytishi uchun qancha masofa bosib o'tishini aytsin.
+
+  Masofalarni kiriting (vergul bilan ajrating):`);
+  masofalar = masofalar.split(',').map(Number);
+
+  var bosibOtilganMasofa = masofalar.reduce(function (acc, currentValue) {
+    return acc + Math.abs(currentValue);
+  }, 0);
+
+  document.getElementById("demo").innerHTML = "Uyiga qaytish uchun bosib o'tiladigan masofa: " + bosibOtilganMasofa + " km";
+}
+
+
+
+
+
+
+
+
 
 
 

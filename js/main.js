@@ -578,6 +578,108 @@ function nechtaBogin() {
   document.getElementById("demo").innerHTML = `So'zda ${boginSoni} ta bo'g'in mavjud.`;
 }
 
+// == 82 ==
+function ASCII_kodniAniqla() {
+  function getASCIICode(character) {
+    if (character.length === 1) {
+      return character.charCodeAt(0);
+    } else {
+      return "Faqat bir belgi kiriting!";
+    }
+  }
+
+  var kiritilganBelgi = prompt(`82.Funskiyaga belgi kiritilsa ushbu belgining ASCII kodini qaytarsin.
+
+  Istalgan belgini kiriting:`);
+  var ASCIIKodi = getASCIICode(kiritilganBelgi);
+
+  document.getElementById("demo").innerHTML = `Belgi: "${kiritilganBelgi}", ASCII kodi: ${ASCIIKodi}`;
+}
+
+// == 83 ==
+function sozlarTengmi() {
+  function tengSozlar(soz1, soz2) {
+    var solishtirilganSoz1 = soz1.toLowerCase();
+    var solishtirilganSoz2 = soz2.toLowerCase();
+
+    return solishtirilganSoz1 === solishtirilganSoz2;
+  }
+
+  var birinchiSoz = prompt(`83.Funksiyaga 2ta so’z beriladi, anashu 2ta so’z bir-biriga teng bo’lsa true qaytsin, aks holda false. Bunda ikkala so’zining katta yoki kichik  harflarda yozilgani ahamiyatsiz deb oling.
+
+  Birinchi so'zni kiriting:`);
+  var ikkinchiSoz = prompt("Ikkinchi so'zni kiriting:");
+  var natija = tengSozlar(birinchiSoz, ikkinchiSoz);
+
+  if (natija) {
+    document.getElementById("demo").innerHTML = `Ha, so'zlar teng!`;
+  } else {
+    document.getElementById("demo").innerHTML = `Yo'q, so'zlar teng emas`;
+  }
+}
+
+// == 84 ==
+function belgiNechta() {
+  function belgiSoni(soz) {
+    var belgiSoni = 0;
+
+    for (var i = 0; i < Infinity; i++) {
+      if (soz[i] === undefined) {
+        break;
+      }
+      belgiSoni++;
+    }
+    return belgiSoni;
+  }
+  var kiritilganSoz = prompt(`84.Funksiyaga so’z berilsa, funksiya ushbu so’zning nechta belgidan iborat ekanligini qaytarsin.
+
+  Bunda string.length propertisidan foydalanish mumkin emas !!!
+
+  So'zni kiriting:`);
+  var natija = belgiSoni(kiritilganSoz);
+
+  document.getElementById("demo").innerHTML = `Kiritilgan so'z ${natija} ta belgidan iborat.`;
+}
+
+// == 85 ==
+function coronaEnd() {
+  function endCorona(tuzalganlar, yangiKasallanganlar, hozirdaKasallar) {
+    var kundanKeyin = 0;
+
+    while (hozirdaKasallar > 0) {
+      hozirdaKasallar -= tuzalganlar;
+      hozirdaKasallar += yangiKasallanganlar;
+      kundanKeyin++;
+
+      if (tuzalganlar <= yangiKasallanganlar) {
+        break;
+      }
+    }
+    return kundanKeyin;
+  }
+  var tuzalganlar = parseInt(prompt(`85. Karona virusdan tuzalganlar soni, yangi kasallanganlar soni va hozirda kasallar soni natijalari qo’limizda mavjud. Tuzalganlar soni va yangi kasallar soni har kuni bir xil natija. Funksiya necha kundan keyin barcha tuzalishini qaytarsin.
+
+  Koronavirusdan tuzalganlar sonini kiriting:`));
+  var yangiKasallanganlar = parseInt(prompt("Yangi kasallanganlar sonini kiriting:"));
+  var hozirdaKasallar = parseInt(prompt("Hozirda kasallar sonini kiriting:"));
+
+  var nechaKun = endCorona(tuzalganlar, yangiKasallanganlar, hozirdaKasallar);
+
+  if (tuzalganlar <= yangiKasallanganlar) {
+    document.getElementById("demo").innerHTML = "Barcha kasallar tuzalishi uchun yangi kasallanganlar soni tuzalganlar sonidan kichik bo'lishi kerak!";
+  } else {
+    document.getElementById("demo").innerHTML = "Barcha bemorlar " + nechaKun + " kunda tuzaladi.";
+  }
+}
+
+
+
+
+
+
+
+
+
 
 
 

@@ -798,6 +798,53 @@ function kofeOlish() {
   document.getElementById("demo").innerHTML = "Jami kofe soni: " + natija + " ta";
 }
 
+// == 93 ==
+function oxirgiBelginiTakrorla() {
+  var matn = prompt(`93. Funksiyaga string va son berilsa, ushbu stringning oxirigi
+  belgisini funksiya son marta takrorlab qaytarib bersin.
+
+  Matn kiriting:`);
+  var marta = parseInt(prompt("Son kiriting:"));
+
+  if (isNaN(marta)) {
+    document.getElementById("demo").innerHTML = "Ikkinchi kiritgan belgingiz raqam emas!";
+    return;
+  }
+
+  var natija = matn + matn.slice(-1).repeat(marta);
+  document.getElementById("demo").innerHTML = "Natija: " + natija;
+}
+
+// == 94 ==
+function yigindiniTop() {
+  var sonlarStr = prompt(`94.Funksiyaga sonlar massivi berilsa, Ana shu massivdagi 5dan
+  katta bo’lgan elementlarni yig’indiisini qaytarsin.
+
+  *massivni vergul(,) bilan ajrating.
+
+  Sonlar massivini kiriting (vergul bilan ajrating):`);
+  var sonlar = sonlarStr.split(',').map(Number);
+
+  var yigindi = sonlar.reduce(function (sum, current) {
+    return current > 5 ? sum + current : sum;
+  }, 0);
+
+  document.getElementById("demo").innerHTML = "Yig'indi: " + yigindi;
+}
+
+// == 95 ==
+function massivYigindiniTop() {
+  var massivStr = prompt(`95.Funksiyaga massiv berilsa, ushbu funksiya massiv elementlarini barchasini yig’indisini qaytarsin.
+
+  Massivni kiriting (vergul bilan ajrating):`);
+  var massiv = massivStr.split(',').map(Number);
+
+  var yigindi = massiv.reduce(function (sum, current) {
+    return sum + current;
+  }, 0);
+
+  document.getElementById("demo").innerHTML = "Massiv yig'indisi: " + yigindi;
+}
 
 
 

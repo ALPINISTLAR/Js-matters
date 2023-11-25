@@ -764,7 +764,39 @@ function boshjoyQosh() {
   document.getElementById("demo").innerHTML = natija;
 }
 
+// == 91 ==
+function bolishVaKatta() {
+  function kattaVaBolish(son1, son2) {
+    var kattaSon = Math.max(son1, son2);
+    var natija = kattaSon / son2;
 
+    return natija;
+  }
+
+  var son1 = parseInt(prompt(`91. Funksiya 2ta son argument qabul qiladi. Funksiya shunday
+  qiymat qaytarsinki, ushbu qiymat ana shu ikkala sondan katta va 2-chi songa bo’linsin.
+
+  Birinchi sonni kiriting:`));
+  var son2 = parseInt(prompt("Ikkinchi sonni kiriting:"));
+
+  var qiymat = kattaVaBolish(son1, son2);
+  document.getElementById("demo").innerHTML = qiymat;
+}
+
+// == 92 ==
+function kofeOlish() {
+  function kofeSoni(n) {
+    n += Math.floor(n / 3);
+
+    return n;
+  }
+
+  var kofe = parseInt(prompt(`92. Agar men cafedan 3ta kofe olsam yana 1ta tekinga qo’shib berishadi. Funksiya nechta kofe olsam meni qo’limda jami nechta kofe bo’lishini qaytarsin.
+
+  Nechta kofe olmoqchisiz?`));
+  var natija = kofeSoni(kofe);
+  document.getElementById("demo").innerHTML = "Jami kofe soni: " + natija + " ta";
+}
 
 
 

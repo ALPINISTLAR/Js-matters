@@ -1143,3 +1143,20 @@ function ahvolniAniqla() {
   let natija = ahvol();
   document.getElementById("demo").innerHTML = natija;
 }
+
+
+// +++++++++++++++++===++++++++++++
+// ================================
+// ++++++++++++++++++++++++++++++++
+function getDistincts() {
+  function getDistinctElements(numbers) {
+    const distinctNumbers = [...new Set(numbers)];
+
+    return distinctNumbers;
+  }
+
+  const inputArray = [1, 2, 3, 4, 1, 2, 5];
+  const resultArray = getDistinctElements(inputArray);
+
+  console.log(resultArray);
+}
